@@ -16,6 +16,7 @@ jobs:
       - name: Build
         run: |
           cd ${{ GITHUB.WORKSPACE }}
+          make -C lzfse [CC="cross-cc"] [LD="cross-ld"]
           make all
 
       - uses: actions/upload-artifact@v4
