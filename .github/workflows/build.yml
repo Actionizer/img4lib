@@ -17,3 +17,8 @@ jobs:
         run: |
           cd ${{ GITHUB.WORKSPACE }}
           make all
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dir
+          path: .
